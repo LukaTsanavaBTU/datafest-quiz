@@ -1,15 +1,18 @@
 main {
     height: 100%;
-    width: 80%;
+    width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .title-div {
     grid-area: 1 / 1 / 2 / 2;
+    align-self: end;
     h1{
         font-size: 3em;
         font-weight: 500;
@@ -35,6 +38,7 @@ main {
 
 .button-div {
     grid-area: 3 / 2 / 4 / 3;
+    align-self: start;
     button {
         border: 2px solid var(--accent-clr);
         border-radius: 20px;
