@@ -30,9 +30,17 @@ main {
         align-items: center;
         gap: 20px;
     }
-    div>img:hover {
-        -webkit-filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr));
-        filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(120%);
+    img {
+        -webkit-filter: saturate(80%);
+        filter: saturate(80%);
+    }
+    img:hover {
+        -webkit-filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
+        filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
+    }
+    img:active {
+        -webkit-filter: drop-shadow(4px 4px 0 var(--accent-clr)) drop-shadow(-4px -4px 0 var(--accent-clr)) saturate(120%);
+        filter: drop-shadow(4px 4px 0 var(--accent-clr)) drop-shadow(-4px -4px 0 var(--accent-clr)) saturate(120%);
     }
 }
 
@@ -70,3 +78,7 @@ main {
         }
     }
     
+    img.selected {
+        -webkit-filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
+        filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
+    }
