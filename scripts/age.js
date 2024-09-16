@@ -1,6 +1,7 @@
 const backButton = document.querySelector("#back-button");
 const confirmButton = document.querySelector("#confirm-button");
 const optionDivs = document.querySelectorAll(".select-div>div");
+const errorText = document.querySelector(".error-div");
 let selectedAge;
 
 optionDivs.forEach((option) => {
@@ -13,10 +14,11 @@ optionDivs.forEach((option) => {
 
 confirmButton.addEventListener("click", (e) => {
     if (selectedAge) {
+        errorText.classList.add("hidden");
         window.localStorage.setItem("age", selectedAge);
         window.location.href = "../pages/how-it-works.html";
     } else {
-        alert("Please, Select an option."); //add visuals to let user know to pick an option
+        errorText.classList.remove("hidden");
     }
 });
 

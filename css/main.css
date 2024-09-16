@@ -6,6 +6,7 @@
     --accent-clr: #00ADB5;
     --accent-negative-clr: #B50800;
     --primary-lighter-clr: #2C333D;
+    --error-clr: #e70c00;
 }
 
 body {

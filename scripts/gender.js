@@ -1,5 +1,6 @@
 const backButton = document.querySelector("button");
 const optionDivs = document.querySelectorAll(".select-div>div");
+const errorText = document.querySelector(".button-div>div");
 let selectedGender;
 
 optionDivs.forEach((option) => {
@@ -12,10 +13,11 @@ optionDivs.forEach((option) => {
 
 backButton.addEventListener("click", (e) => {
     if (selectedGender) {
+        errorText.classList.add("hidden");
         window.localStorage.setItem("gender", selectedGender);
         window.location.href = "../pages/age.html";
     } else {
-        alert("Please, Select an option."); //add visuals to let user know to pick an option
+        errorText.classList.remove("hidden");
     }
 });
 

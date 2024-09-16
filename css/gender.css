@@ -47,8 +47,15 @@ main {
 .button-div {
     flex: 1;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    div {
+        font-size: 2em;
+        font-weight: 300;
+        color: var(--error-clr);
+    }
     button {
         border: 1px solid var(--accent-clr);
         border-radius: 20px;
@@ -71,4 +78,8 @@ main {
 img.selected {
     -webkit-filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
     filter: drop-shadow(2px 2px 0 var(--accent-clr)) drop-shadow(-2px -2px 0 var(--accent-clr)) saturate(110%);
+}
+
+.hidden {
+    display: none;
 }
