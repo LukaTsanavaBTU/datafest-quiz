@@ -23,6 +23,7 @@ confirmButton.addEventListener("click", (e) => {
 });
 
 backButton.addEventListener("click", (e) => {
+    errorText.classList.add("hidden");
     window.location.href = "../pages/gender.html"
 });
 
