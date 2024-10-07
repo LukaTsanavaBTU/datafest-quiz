@@ -26,12 +26,34 @@ main {
     width: 30em;
     font-size: 1.5em;
     font-weight: 300;
+    img {
+        width: 600px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
 }
 
 .select-div {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    &.short {
+        flex-direction: row;
+    }
+    input {
+        background-color: var(--primary-clr);
+        border: 2px solid var(--secondary-clr);
+        border-radius: 10px;
+        width: 20em;
+        height: 3em;
+        padding: 0px 10px;
+        font-size: 1.2em;
+        color: var(--secondary-clr);
+        text-align: center;
+        &:focus {
+            outline: 2px solid var(--accent-clr);
+        }
+    }
 }
 
 .answer-div {
@@ -45,8 +67,36 @@ main {
         background-color: var(--accent-clr);
         color: var(--primary-clr);
     }
+    &.short {
+        width: 10em;
+        text-align: center;
+    }
 }
 
+
+
+.select-img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.answer-img {
+    padding: 3px;
+    border-radius: 10px;
+    img {
+        display: block;
+        border-radius: 10px;
+        width: 400px;
+    }
+    &:hover {
+        filter: contrast(120%);
+    }
+}
+
+.selected-img {
+    border: 3px solid var(--accent-clr);
+}
 
 .button-div {
     button {
