@@ -30,11 +30,6 @@ main {
     font-weight: 300;
 }
 
-.incorrect-answer {
-    font-weight: 500;
-    color: var(--error-clr);
-}
-
 .button-div {
     button {
         border: 1px solid var(--accent-clr);
