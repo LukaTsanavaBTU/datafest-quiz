@@ -1,6 +1,5 @@
-const options = document.querySelectorAll(".answer-div");
+const options = document.querySelectorAll(".answer-div") || document.querySelectorAll(".select-div");
 const answerButton = document.querySelector("button");
-let selectedGender;
 
 options.forEach((option) => {
     option.addEventListener("click", (e) => {
@@ -14,3 +13,15 @@ function disableAllDivs() {
         option.classList.remove("selected");
     });
 }
+
+answerButton.addEventListener("click", (e) => {
+    const selected = document.querySelector(".selected");
+    if (!selected) {
+        alert("Please, choose and option.");
+    } else if (selected.dataset.correct === "1") {
+        const fileNum = parseInt(location.href.split("/").at(-1).at(9));
+        location.href = `./question-${fileNum + 1}.html`;
+    } else {
+        location.href = "./wrong-answer.html";
+    }
+});
