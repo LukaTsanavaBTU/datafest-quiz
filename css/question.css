@@ -64,8 +64,7 @@ main {
     font-size: 1.5em;
     font-weight: 300;
     &:hover {
-        background-color: var(--accent-clr);
-        color: var(--primary-clr);
+        outline: 1px solid var(--accent-clr);
     }
     &.short {
         width: 10em;
@@ -73,7 +72,10 @@ main {
     }
 }
 
-
+.selected{
+    background-color: var(--accent-clr);
+    color: var(--primary-clr);
+}
 
 .select-img {
     display: flex;
