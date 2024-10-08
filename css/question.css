@@ -76,7 +76,7 @@ main {
     }
 }
 
-.selected{
+.answer-div.selected{
     background-color: var(--accent-clr);
     color: var(--primary-clr);
 }
@@ -96,12 +96,12 @@ main {
         width: 400px;
     }
     &:hover {
-        filter: contrast(120%);
+        outline: 1px solid var(--accent-clr);
     }
 }
 
-.selected-img {
-    border: 3px solid var(--accent-clr);
+.answer-img.selected {
+    outline: 3px solid var(--accent-clr);
 }
 
 .button-div {

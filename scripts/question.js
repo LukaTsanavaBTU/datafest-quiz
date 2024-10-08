@@ -1,4 +1,5 @@
-const options = document.querySelectorAll(".answer-div") || document.querySelectorAll(".select-div");
+const options = (document.querySelectorAll(".answer-div").length > 0) ? document.querySelectorAll(".answer-div") : document.querySelectorAll(".answer-img");
+console.log(options);
 const answerButton = document.querySelector("button");
 
 options.forEach((option) => {

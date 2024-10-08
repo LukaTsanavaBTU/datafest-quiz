@@ -6,7 +6,7 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/question.css">
-    <script src="../scripts/question-basic.js" defer></script>
+    <script src="../../scripts/question.js" defer></script>
 </head>
 <body>
     <main>
@@ -19,8 +19,8 @@
             <img src="../../media/ai-generated-2.jpg" alt="A potentially AI generated image of a spaceship">
         </div>
         <div class="select-div short">
-            <div class="answer-div short">Real</div>
-            <div class="answer-div short">AI Generated</div>
+            <div class="answer-div short selected" data-correct="0">Real</div>
+            <div class="answer-div short" data-correct="1">AI Generated</div>
         </div>
         <div class="button-div">
             <button>Answer</button>
