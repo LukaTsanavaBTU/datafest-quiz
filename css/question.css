@@ -119,24 +119,20 @@ main {
         font-weight: 300;
         width: 200px;
         padding: 5px;
+        &.error {
+            border: 1px solid var(--error-clr);
+        }
     }
     button:hover {
         background-color: var(--accent-clr);
+        &.error {
+            background-color: var(--error-clr);
+        }
     }
     button:active {
         background-color: var(--primary-clr);
+        &.error {
+            background-color: var(--primary-clr);
+        }
     }
 }
-
-.error {
-    visibility: hidden;
-    text-align: center;
-    color: var(--error-clr);
-    font-weight: 300;
-    font-size: 1.5em;
-}
-
-.show {
-    visibility: visible;
-}
-

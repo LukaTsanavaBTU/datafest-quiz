@@ -1,6 +1,5 @@
 const options = (document.querySelectorAll(".answer-div").length > 0) ? document.querySelectorAll(".answer-div") : document.querySelectorAll(".answer-img");
 const answerButton = document.querySelector("button");
-const errorText = document.querySelector(".error");
 
 options.forEach((option) => {
     option.addEventListener("click", (e) => {
@@ -18,13 +17,13 @@ function disableAllDivs() {
 answerButton.addEventListener("click", (e) => {
     const selected = document.querySelector(".selected");
     if (!selected) {
-        errorText.classList.add("show");
+        answerButton.classList.add("error");
     } else if (selected.dataset.correct === "1") {
-        errorText.classList.remove("show");
+        answerButton.classList.remove("error");
         const fileNum = parseInt(location.href.split("/").at(-1).at(9));
         location.href = `./question-${fileNum + 1}.html`;
     } else {
-        errorText.classList.remove("show");
+        answerButton.classList.remove("error");
         location.href = "./wrong-answer.html";
     }
 });
